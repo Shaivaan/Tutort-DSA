@@ -1,0 +1,15 @@
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    let n = prices.length;
+    let minStockPrice = Infinity;
+    let profit = 0;
+    for(var i = 0;i < n;i++){
+        let currentStockPrice = prices[i];
+        if(minStockPrice < currentStockPrice) profit += (currentStockPrice - minStockPrice);
+        minStockPrice = currentStockPrice;
+    }
+    return profit;
+};
