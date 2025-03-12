@@ -1,0 +1,9 @@
+var containsDuplicate = function(nums) {
+    let n = nums.length;
+    let obj = {};
+    for(var i = 0;i < n;i++){
+        if(obj[nums[i]] === undefined) obj[nums[i]] = 1;
+        else return true;
+    }
+    return false;
+};

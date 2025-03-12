@@ -1,0 +1,13 @@
+var moveZeroes = function(nums) {
+let temp = 0;
+   for(var i = 0;i < nums.length;i++){
+      let elem = nums[i];
+      if(elem === 0 && nums[temp] !== 0) temp = i;      
+      else if(elem && nums[temp] === 0){
+        let temp2 = nums[i];
+        nums[i] = nums[temp];
+        nums[temp] = temp2;
+        i = temp;
+      }
+   }
+};

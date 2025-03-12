@@ -1,0 +1,20 @@
+var nextGreaterElement = function(nums1, nums2) {
+    let n = nums1.length;
+    let m = nums2.length;
+    let ans = [];
+    for(var i = 0;i < n;i++){
+      let flag = false;
+      for(var j = 0;j < m;j++){
+        let elem1 = nums1[i];
+        let elem2 = nums2[j];
+        if(elem1 === elem2) flag = true;
+        else if(flag && elem2 > elem1){
+          ans.push(elem2);
+          flag = false;
+          break;
+        }
+      }
+      if(flag) ans.push(-1);
+    }
+    return ans;
+};

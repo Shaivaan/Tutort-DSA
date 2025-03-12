@@ -1,0 +1,27 @@
+/*
+var summaryRanges = function(nums) {
+       if(!nums.length)return [];
+       let n = nums.length; 
+       let range = [nums[0]];   
+       let prevValue = nums[0];
+       let output = [];
+
+       for(var i = 1;i < n;i++){
+        let elem = nums[i];
+        if(elem - prevValue === 1) range.push(elem);
+        else {
+            output.push(enterRange(range));
+            range = [elem];
+        }
+        prevValue = elem;
+       }
+       output.push(enterRange(range));
+       return output;
+};
+
+    function enterRange(range){
+        let n = range.length;
+        if(n !== 1) return `${range[0]}->${range[n-1]}`;
+        return (range[0] + '');
+    }
+*/

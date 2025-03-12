@@ -1,0 +1,12 @@
+var containsNearbyDuplicate = function(nums, k) {
+    let obj = {};
+    let n = nums.length;
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (i - obj[num] <= k && obj[num] !== undefined) {
+            return true;
+        }
+        obj[num] = i;
+    }
+    return false;
+};
